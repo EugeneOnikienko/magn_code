@@ -14,11 +14,15 @@ class MF_anisotropy_cart( object ):
     def __init__( self, direction, constant ):
         """Initialize the MF_anisotropy_cart by the essential parameters
 
-        Arguments:
-        direction   -- arbitrary vector, the size doesn't metter (vector)
-        constant    -- the coefficient of proportionality (scalar)
+        Arguments
+        ---------
+        direction : ndarray
+            arbitrary vector, the size doesn't metter
+        constant : scalar
+            the coefficient of proportionality
 
-        Return:
+        Return
+        ------
         None.
         """
         self.direct = np.array( direction ) / norm( direction )
@@ -27,11 +31,13 @@ class MF_anisotropy_cart( object ):
     def __call__( self, m, t ):
         """
 
-        Arguments:
-        m       -- magnetizarion (vector);
-        t       -- time (scalar).
+        Arguments
+        ---------
+        m : magnetizarion (vector);
+        t : time (scalar).
 
-        Return:
+        Return
+        ------
         the value of magnetic field that acts on the magnetization m.
         """
         return self.const * np.dot( self.direct, m ) * self.direct
