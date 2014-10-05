@@ -24,7 +24,3 @@ class RHS_safm_polar( object ):
     		self.so*(c[0]-c[1]) + 2*self.ai + ( self.oi*c[2]*(c[0]*s[1]**2 - c[1]*s[0]**2) + self.aoi*s[2]*(s[0]**2 + s[1]**2) ) / (s[0]*s[1])
     	])
 
-
-        
-        
-        
